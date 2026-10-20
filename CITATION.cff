@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the manuscript and this archive."
+title: "Code and data for 'A Data-Enabled Multi-Task Learning Framework for Production Volume Estimation and Operational Efficiency Classification' (OMEGA-D-26-00675.R1)"
+type: software
+version: 2.0.0
+authors:
+  - family-names: "Karbassi Yazdi"
+    given-names: "Amir"
+  - family-names: "Tavana"
+    given-names: "Madjid"
+  - family-names: "Tan"
+    given-names: "Yong"
+repository-code: "https://github.com/karbassi60/manufacturing-ml-ready-dataset"
+keywords:
+  - manufacturing
+  - multi-task learning
+  - reproducibility

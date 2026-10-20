@@ -1,0 +1,495 @@
+{
+ "sha256": "94588e1be0867d534aada8f39e636c11e3becb36866c59521f0a6afb3e8523e7",
+ "shape": [
+  1000,
+  39
+ ],
+ "dtype_counts": {
+  "int64": 25,
+  "float64": 12,
+  "str": 2
+ },
+ "string_columns": [
+  "Supply_Chain_Resilience",
+  "Efficiency_Level"
+ ],
+ "missing_cells": 0,
+ "exact_duplicate_rows": 0,
+ "numeric_mean_sd": {
+  "Production_Hours": [
+   2.842170943040401e-17,
+   1.0005003753127737
+  ],
+  "Workforce_Size": [
+   0.0,
+   1.0005003753127737
+  ],
+  "Machine_Efficiency": [
+   3.552713678800501e-17,
+   1.0005003753127737
+  ],
+  "Raw_Materials_Cost": [
+   0.0,
+   1.0005003753127737
+  ],
+  "Shift_Hours": [
+   -1.0658141036401503e-17,
+   1.0005003753127737
+  ],
+  "Production_Volume_Per_Hour": [
+   -3.730349362740526e-17,
+   1.000500375312774
+  ]
+ },
+ "pvh": {
+  "min": -20.51396524462416,
+  "max": 9.943392902790242,
+  "q1": -0.010147778447322175,
+  "median": 0.019059096024290248,
+  "q3": 0.04576815827552488,
+  "skew": -12.428180283648288,
+  "excess_kurtosis": 259.0669512242414,
+  "n_abs_gt5": 5,
+  "prodhours_range_abs_gt5": [
+   -1.0476016541022448,
+   -1.0164508466653657
+  ],
+  "n_abs_gt1": 26,
+  "share_negative": 0.305
+ },
+ "normal_score_sd_test": 0.9690111468773395,
+ "normal_score_mean_square_test_about_train_mean": 0.9344284042053852,
+ "calendar": {
+  "n_distinct_dayofyear": 340,
+  "n_distinct_weekday_col": 12,
+  "n_distinct_hours": 24,
+  "month_equals_dayofyear": true,
+  "dup_cols": true,
+  "spearman_weekday_dayofyear": 0.9964637568945055,
+  "spearman_fileorder_dayofyear": -0.012586010757277536,
+  "n_duplicate_day_hour_pairs": 55
+ },
+ "block_dayofyear_range": {
+  "train": [
+   -1.7473424800545834,
+   1.6856998746713872
+  ],
+  "validation": [
+   -1.737832667437614,
+   1.6761900620544177
+  ],
+  "calibration": [
+   -1.6427345412679193,
+   1.5906017485016926
+  ],
+  "test": [
+   -1.7283228548206444,
+   1.704719499905326
+  ]
+ },
+ "time_order": {
+  "production_volume": {
+   "lag1_spearman": 0.029742125213638435,
+   "trend_spearman": -0.017985701996630188
+  },
+  "department_maintenance": {
+   "lag1_spearman": -0.032035617271649865,
+   "trend_spearman": -0.005656188169259138
+  },
+  "efficiency_regime": {
+   "lag1_spearman": 0.0234229118910862,
+   "trend_spearman": -0.018595084175928554
+  }
+ },
+ "file_order": {
+  "production_volume": {
+   "lag1_spearman": -0.007996657329749659,
+   "trend_spearman": 0.017073663867020344
+  },
+  "department_maintenance": {
+   "lag1_spearman": 0.05844552698841425,
+   "trend_spearman": 0.011736491358918228
+  },
+  "efficiency_regime": {
+   "lag1_spearman": 0.014835242247528036,
+   "trend_spearman": 0.06911390323714006
+  }
+ },
+ "supplier_counts_min_max": [
+  89,
+  110
+ ],
+ "department_counts": {
+  "Department_Logistics": 234,
+  "Department_Maintenance": 257,
+  "Department_Production": 254,
+  "Department_Quality_Control": 255
+ },
+ "n_predictors": 15,
+ "pred_names": [
+  "Workforce_Size",
+  "Raw_Materials_Cost",
+  "Shift_Hours",
+  "Timestamp_Hour",
+  "Weekday",
+  "Supplier_Advanced Materials Inc.",
+  "Supplier_Apex Industrial Solutions",
+  "Supplier_EuroTrade Supplies",
+  "Supplier_GlobalTech Components",
+  "Supplier_Industrial Innovations LLC",
+  "Supplier_MegaManufacturing Resources",
+  "Supplier_NorthStar Manufacturing",
+  "Supplier_Precision Parts Supply",
+  "Supplier_Quantum Resource Group",
+  "Supplier_TechCore Suppliers"
+ ],
+ "blocks": {
+  "train": {
+   "n": 550,
+   "dept_neg": 403,
+   "dept_pos": 147,
+   "regime_counts": [
+    185,
+    183,
+    182
+   ]
+  },
+  "validation": {
+   "n": 150,
+   "dept_neg": 113,
+   "dept_pos": 37,
+   "regime_counts": [
+    39,
+    51,
+    60
+   ]
+  },
+  "calibration": {
+   "n": 100,
+   "dept_neg": 77,
+   "dept_pos": 23,
+   "regime_counts": [
+    28,
+    33,
+    39
+   ]
+  },
+  "test": {
+   "n": 200,
+   "dept_neg": 150,
+   "dept_pos": 50,
+   "regime_counts": [
+    58,
+    64,
+    78
+   ]
+  }
+ },
+ "tercile_cut": [
+  -0.4983942532849253,
+  0.3800674982830279
+ ],
+ "equipment_age_vs_regime_agree": 961,
+ "equipment_age_efficiency_ranges": {
+  "Old": [
+   -3.133779507988785,
+   -0.4268915525759058
+  ],
+  "Medium": [
+   -0.4268915525759058,
+   0.4515701989920473
+  ],
+  "New": [
+   0.4515701989920473,
+   3.097170125225768
+  ]
+ },
+ "efficiency_level_vs_regime_agree": 949,
+ "efficiency_level_ranges": {
+  "Low": [
+   -3.133779507988785,
+   -0.4268915525759058
+  ],
+  "Medium": [
+   -0.4166768810460459,
+   0.4617848705219073
+  ],
+  "High": [
+   0.4719995420517672,
+   3.097170125225768
+  ]
+ },
+ "efficiency_level_counts": {
+  "Medium": 336,
+  "Low": 333,
+  "High": 331
+ },
+ "shift_category_ranges": {
+  "Low": [
+   -2.966297259873748,
+   -1.0957591404006282
+  ],
+  "Medium": [
+   -1.0853092067722867,
+   0.7852289127008334
+  ],
+  "High": [
+   0.7956788463291748,
+   2.6662169658022945
+  ]
+ },
+ "scr_spearman_with": {
+  "Workforce_Size": 0.6832646262508209,
+  "Raw_Materials_Cost": 0.798165478549842,
+  "Shift_Hours": 0.7066260548225742,
+  "Machine_Efficiency": 0.6992001937469764,
+  "Production_Hours": 0.6455954709882104
+ },
+ "scr_raw_materials_ranges": {
+  "Low": [
+   -3.11191695032804,
+   -1.0966664307209035
+  ],
+  "Medium": [
+   -1.0761026499085855,
+   0.9494297601047088
+  ],
+  "High": [
+   0.9494297601047088,
+   2.974962170118003
+  ]
+ },
+ "maintenance_event": {
+  "positives": 248,
+  "overlap_with_department_maintenance": 66,
+  "chi2_p_vs_department_maintenance": 0.7675363940649528,
+  "pointbiserial_with_operating": {
+   "Production_Hours": 0.5719740615991528,
+   "Workforce_Size": 0.5938154407320161,
+   "Machine_Efficiency": 0.6080426100754918,
+   "Raw_Materials_Cost": 0.6658217884202372,
+   "Shift_Hours": 0.6445663123347795
+  },
+  "pointbiserial_with_pvh": 0.021148189388433682,
+  "logistic_auc_validation": 0.920116357126874,
+  "logistic_auc_test": 0.9435483870967742
+ },
+ "train_spearman_with_pvh": {
+  "Workforce_Size": 0.1259038609353684,
+  "Raw_Materials_Cost": 0.16072150105171726,
+  "Shift_Hours": 0.15634231683155392,
+  "Timestamp_Hour": -0.05418717084745572,
+  "Weekday": -0.028776801390592605
+ },
+ "train_corr_with_department": {
+  "Workforce_Size": 0.029019560096772194,
+  "Raw_Materials_Cost": -0.007168399127821651,
+  "Shift_Hours": 0.01696654905677213,
+  "Timestamp_Hour": -0.016303784439641335,
+  "Weekday": -0.008606295547070814,
+  "Supplier_Advanced Materials Inc.": -0.020407828515048576,
+  "Supplier_Apex Industrial Solutions": -0.013658090938623118,
+  "Supplier_EuroTrade Supplies": 0.0014297512778228625,
+  "Supplier_GlobalTech Components": 0.019393153049525606,
+  "Supplier_Industrial Innovations LLC": 0.04078999351060452,
+  "Supplier_MegaManufacturing Resources": -0.041183753417478465,
+  "Supplier_NorthStar Manufacturing": -0.0705617896073584,
+  "Supplier_Precision Parts Supply": -0.030388672656455434,
+  "Supplier_Quantum Resource Group": 0.0752741611306613,
+  "Supplier_TechCore Suppliers": 0.037087174809945354
+ },
+ "max_abs_train_corr_with_department": 0.0752741611306613,
+ "corr_with_machine_efficiency": {
+  "Workforce_Size": 0.8184976598368076,
+  "Raw_Materials_Cost": 0.8668756503720279,
+  "Shift_Hours": 0.8241189801070355,
+  "Production_Hours": 0.8076912840128116
+ },
+ "r2_efficiency_on_3_operating_vars": 0.7892515786173038,
+ "pearson_with_targets_all_cols": {
+  "Workforce_Size": [
+   0.07013677188580782,
+   0.025740160618286982,
+   0.7279613367823408
+  ],
+  "Raw_Materials_Cost": [
+   0.09705359917705095,
+   0.002738358817399568,
+   0.7715009964248871
+  ],
+  "Shift_Hours": [
+   0.1072858568176399,
+   0.004483735012029737,
+   0.7431566361103926
+  ],
+  "Timestamp_Hour": [
+   -0.029377883263514083,
+   -0.016375465545923777,
+   -0.06064280917664655
+  ],
+  "Weekday": [
+   -0.03603968055032598,
+   -0.0021666990222754165,
+   -0.0167411469151329
+  ],
+  "Supplier_Advanced Materials Inc.": [
+   0.03048623617742967,
+   0.02793663638511227,
+   -0.0007718763046367443
+  ],
+  "Supplier_Apex Industrial Solutions": [
+   -0.011652264764018119,
+   -0.012954244660891292,
+   -0.024459183482060113
+  ],
+  "Supplier_EuroTrade Supplies": [
+   -0.007298215819221773,
+   -0.05110843463293932,
+   -0.0036744210957773047
+  ],
+  "Supplier_GlobalTech Components": [
+   0.03969993789979643,
+   0.057278495018076865,
+   -0.014457126853974043
+  ],
+  "Supplier_Industrial Innovations LLC": [
+   0.0412531037341885,
+   0.012653008176384555,
+   -0.005441155348162301
+  ],
+  "Supplier_MegaManufacturing Resources": [
+   0.022184612775178334,
+   -0.07635885283660684,
+   0.006322657495477008
+  ],
+  "Supplier_NorthStar Manufacturing": [
+   -0.028757928966488832,
+   -0.009288624499426688,
+   -0.017184656099591588
+  ],
+  "Supplier_Precision Parts Supply": [
+   -0.07224489017118345,
+   -0.04720030885943129,
+   0.028557234508637962
+  ],
+  "Supplier_Quantum Resource Group": [
+   -0.043173028931356314,
+   0.05493559309896538,
+   0.019644383584016788
+  ],
+  "Supplier_TechCore Suppliers": [
+   0.024489120835152523,
+   0.04190851841079955,
+   0.014131345904219904
+  ],
+  "Machine_Efficiency": [
+   0.07465975347899312,
+   -0.002163274864258191,
+   0.8890717030274908
+  ],
+  "Production_Hours": [
+   -0.03754157963908393,
+   0.019016194972422948,
+   0.7252691755149071
+  ]
+ },
+ "eta2_department": {
+  "Production_Hours": 0.0013446432576335176,
+  "Workforce_Size": 0.0014822060285858709,
+  "Machine_Efficiency": 0.0003701900486387986,
+  "Raw_Materials_Cost": 0.0008544603237370294,
+  "Shift_Hours": 0.0016991175609721387,
+  "Production_Volume_Per_Hour": 0.003379699336676511,
+  "Timestamp_Hour": 0.0014447095654312532,
+  "Weekday": 0.0009266979969624441
+ },
+ "eta2_supplier": {
+  "Production_Hours": 0.008254044269436885,
+  "Workforce_Size": 0.005128223380921764,
+  "Machine_Efficiency": 0.006856269521317254,
+  "Raw_Materials_Cost": 0.004267940784640535,
+  "Shift_Hours": 0.0041697751785791945,
+  "Production_Volume_Per_Hour": 0.008549457961406893,
+  "Timestamp_Hour": 0.008566429610973267,
+  "Weekday": 0.005505063382504849
+ },
+ "chi2_p_department_vs": {
+  "supplier": 0.08267157085211556,
+  "equipment_age": 0.7867676412378303,
+  "shift_category": 0.12576186769957273,
+  "supply_chain_resilience": 0.953475038008265,
+  "calendar_month_col": 0.5429369925632721
+ },
+ "kruskal_p_department_numeric": {
+  "Production_Hours": 0.699220442184727,
+  "Workforce_Size": 0.6927009645650921,
+  "Machine_Efficiency": 0.9265607260583607,
+  "Raw_Materials_Cost": 0.8447691686250943,
+  "Shift_Hours": 0.5316857046754406,
+  "Production_Volume_Per_Hour": 0.970923041563787,
+  "Timestamp_Hour": 0.6653721449069672,
+  "Weekday": 0.8037783484800607
+ },
+ "kruskal_p_supplier_numeric": {
+  "Production_Hours": 0.5294298589715063,
+  "Workforce_Size": 0.9451475728270692,
+  "Machine_Efficiency": 0.8526046148113539,
+  "Raw_Materials_Cost": 0.9871572685913738,
+  "Shift_Hours": 0.9448159322198583,
+  "Production_Volume_Per_Hour": 0.07704708598047931,
+  "Timestamp_Hour": 0.4506767965002495,
+  "Weekday": 0.7766188460332502
+ },
+ "min_p_all_department_supplier_tests": 0.07704708598047931,
+ "pca_explained": [
+  0.18110004678157013,
+  0.07983608584079309,
+  0.07739621091659363
+ ],
+ "pca_pc1_loadings": {
+  "Workforce_Size": -0.5644611948715672,
+  "Raw_Materials_Cost": -0.580103562517071,
+  "Shift_Hours": -0.5712721524585948,
+  "Timestamp_Hour": 0.06365737917648949,
+  "Weekday": 0.03625692931294475,
+  "Supplier_Advanced Materials Inc.": 0.002554772820341751,
+  "Supplier_Apex Industrial Solutions": 0.0330161919296913,
+  "Supplier_EuroTrade Supplies": -0.04181471903543314,
+  "Supplier_GlobalTech Components": -0.0033647965961872877,
+  "Supplier_Industrial Innovations LLC": -0.0162849005796302,
+  "Supplier_MegaManufacturing Resources": -0.050952840645073584,
+  "Supplier_NorthStar Manufacturing": 0.08413531955262174,
+  "Supplier_Precision Parts Supply": -0.0009594584662596854,
+  "Supplier_Quantum Resource Group": -0.0181108113764603,
+  "Supplier_TechCore Suppliers": 0.004389172774472933
+ },
+ "corr_five_operating": {
+  "min": 0.7786668107172118,
+  "max": 0.8700797433764781
+ },
+ "pvh_pearson_with_five_max_abs": 0.01506642545791378,
+ "pvh_spearman_with_five": {
+  "Production_Hours": 0.03277904438660886,
+  "Workforce_Size": 0.1425740443084458,
+  "Machine_Efficiency": 0.16335676201222082,
+  "Raw_Materials_Cost": 0.1766502140450485,
+  "Shift_Hours": 0.18794274002772499
+ },
+ "pca_pc2_loadings": {
+  "Workforce_Size": 0.031060897726517447,
+  "Raw_Materials_Cost": 0.04903638399197405,
+  "Shift_Hours": -0.012471491476302547,
+  "Timestamp_Hour": 0.3644114789264892,
+  "Weekday": -0.5133271971780692,
+  "Supplier_Advanced Materials Inc.": -0.1471159727314714,
+  "Supplier_Apex Industrial Solutions": 0.06677644643393463,
+  "Supplier_EuroTrade Supplies": -0.05086853780860799,
+  "Supplier_GlobalTech Components": -0.19442612389919653,
+  "Supplier_Industrial Innovations LLC": -0.05824060978161654,
+  "Supplier_MegaManufacturing Resources": 0.20206422590687823,
+  "Supplier_NorthStar Manufacturing": 0.49577716218871376,
+  "Supplier_Precision Parts Supply": 0.17278699304820916,
+  "Supplier_Quantum Resource Group": 0.028451436408064863,
+  "Supplier_TechCore Suppliers": -0.4615208613378893
+ }
+}
